@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Mini Games</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎮 Mini Games</h1>
+
+<!-- МЕНЮ -->
+<div id="menu" class="screen active">
+  <button onclick="openScreen('block')">🧩 Block Blast</button>
+  <button onclick="openScreen('rps')">✂️🪨🧻</button>
+  <button onclick="openScreen('ttt')">⭕❌</button>
+  <button onclick="openScreen('keste')">📅 Кесте</button>
+  <button onclick="openAbout()">📸 О нас</button>
+</div>
+
+<!-- BLOCK BLAST -->
+<div id="block" class="screen">
+  <button onclick="openScreen('menu')">⬅ Главная</button>
+  <h2>🧩 Block Blast</h2>
+  <div id="board"></div>
+  <div id="blocks"></div>
+</div>
+
+<!-- RPS -->
+<div id="rps" class="screen">
+  <button onclick="openScreen('menu')">⬅ Главная</button>
+  <h2>✂️🪨🧻</h2>
+  <button onclick="playRPS('✂️')">✂️</button>
+  <button onclick="playRPS('🪨')">🪨</button>
+  <button onclick="playRPS('🧻')">🧻</button>
+  <div id="rpsResult"></div>
+</div>
+
+<!-- TTT -->
+<div id="ttt" class="screen">
+  <button onclick="openScreen('menu')">⬅ Главная</button>
+  <h2>⭕❌</h2>
+  <div id="tic"></div>
+</div>
+
+<!-- КЕСТЕ -->
+<div id="keste" class="screen">
+  <button onclick="openScreen('menu')">⬅ Главная</button>
+  <h2>📅 Кесте</h2>
+  <div class="days">
+    <button onclick="showDay(1)">1 күн</button>
+    <button onclick="showDay(2)">2 күн</button>
+    <button onclick="showDay(3)">3 күн</button>
+    <button onclick="showDay(4)">4 күн</button>
+    <button onclick="showDay(5)">5 күн</button>
+  </div>
+  <div id="lessons"></div>
+</div>
+
+<!-- О НАС → Инста -->
+<div id="aboutModal" class="modal">
+  <div class="modal-content">
+    <h2>📸 Instagram</h2>
+    <a href="https://www.instagram.com/r_temirtasov_?igsh=OXdoNHVnZXRudzZl" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+           alt="Instagram"
+           class="insta-logo">
+    </a>
+    <p>Разработчик: Temirtasov</p>
+    <button onclick="closeAbout()">Закрыть</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
