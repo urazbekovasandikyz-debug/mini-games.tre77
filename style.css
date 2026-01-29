@@ -1,0 +1,111 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  text-align:center;
+}
+
+.screen{display:none;padding:20px}
+.screen.active{display:block}
+
+button{
+  padding:14px 26px;
+  margin:8px;
+  font-size:18px;
+  border:none;
+  border-radius:14px;
+  cursor:pointer;
+  background:linear-gradient(135deg,#00ffd5,#00b3ff);
+  box-shadow:0 0 15px rgba(0,255,213,.6);
+  transition:.15s;
+}
+button:hover{transform:scale(1.05)}
+button:active{transform:scale(.9)}
+
+.ripple{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,.6);
+  animation:ripple .6s linear;
+}
+@keyframes ripple{
+  from{transform:scale(0);opacity:1}
+  to{transform:scale(4);opacity:0}
+}
+
+/* BLOCK BLAST */
+#board{
+  width:300px;
+  height:300px;
+  margin:20px auto;
+  display:grid;
+  grid-template-columns:repeat(10,1fr);
+  gap:3px;
+}
+.cell{
+  background:#222;
+  border-radius:6px;
+}
+.cell.filled{
+  background:linear-gradient(135deg,#ff00cc,#3333ff);
+}
+#blocks{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+.block div{
+  width:18px;
+  height:18px;
+  background:#00ffd5;
+  margin:2px;
+  border-radius:4px;
+}
+
+/* TTT */
+#tic{
+  display:grid;
+  grid-template-columns:repeat(3,80px);
+  gap:5px;
+  justify-content:center;
+}
+.tcell{
+  width:80px;
+  height:80px;
+  background:#222;
+  font-size:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Кесте */
+.lesson{
+  background:rgba(255,255,255,.12);
+  padding:8px;
+  margin:6px;
+  border-radius:8px;
+}
+
+/* МОДАЛ О НАС */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.modal-content{
+  background:#0d1117;
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+  width:300px;
+}
+.insta-logo{
+  width:80px;
+  height:80px;
+  margin:10px;
+}
